@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About &ndash; Alba Herrerias</title>
+  <meta name="author" content="Alba Herrerias" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      align-items: center;
+      background-color: #1c1c1c;
+      color: #FEFEFE;
+      min-height: 100vh;
+      display: flex;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+      font-size: 1.2em;
+      justify-content: center;
+      overflow: scroll;
+    }
+
+    main {
+      max-width: 800px;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    p {
+      margin: 20px 0;
+    }
+
+    a {
+      color: white;
+      transition: color 0.2s ease-in;
+    }
+
+    a:hover {
+      color: #EFB51A;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    li:not(:first-child) {
+      margin-left: 20px;
+    }
+
+    footer {
+      margin-top: 40px;
+    }
+
+    .wave {
+      animation-delay: 800ms;
+      animation-duration: 1s;
+      animation-name: wave-animation;
+      animation-timing-function: linear;
+      display: inline-block;
+      transform-origin: 70% 70%;
+    }
+
+    @keyframes wave-animation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      25% {
+        transform: rotate(-10deg)
+      }
+
+      50% {
+        transform: rotate(14deg);
+      }
+
+      75% {
+        transform: rotate(-10deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    @media (max-width: 800px) {
+      body {
+        font-size: 1.1em;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- 
+    I do SPAs for a living and that's why this site is static :) 
+    
+    Look, a cat!
+    /ᐠ｡‸｡ᐟ\*ᵖᵘʳʳ*
+  -->
+  <main>
+    <h1>Hello <span class="wave">&#x1F44B;</span></h1>
+    <p>
+      I'm Alba Herrerías, a software developer specialized in full stack JS development. I have over <span
+        id="years">4</span> years of professional experience developing applications with technologies such as Angular,
+      Vue, Nuxt, AWS, Docker, Firebase, Flutter, Jest, NestJS, PostgreSQL and SCSS.
+    </p>
+
+    <p>
+      I love CSS and I enjoy using it every time I have the chance. I'm also interested in topics like
+      accessibility, performance, semantic HTML and open source.
+    </p>
+
+    <p>
+      I'm from the Canary Islands, Spain. I work remotely with the nicest people at <a
+        href="https://neighbourhood.ie/">The
+        Neighbourhoodies</a>. Besides work I enjoy reading books and going to the movies.
+    </p>
+
+    <footer>
+      <ul>
+        <li><a href="https://github.com/AlbaHerrerias">Github</a></li>
+        <li><a href="https://twitter.com/alba_dev">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/alba-herrerias-ramirez/">Linkedin</a></li>
+      </ul>
+    </footer>
+  </main>
+  <script>
+    const years = new Date().getFullYear() - 2017;
+    const element = document.getElementById("years");
+    if (element !== element.innerText) {
+      element.innerText = years;
+    }
+  </script>
+</body>
+
+</html>
